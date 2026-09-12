@@ -1,0 +1,40 @@
+LOGOS DAS EMPRESAS
+==================
+
+Coloque os arquivos aqui com estes nomes:
+
+    kpmg.png
+    shakers.png
+    pgm.png
+
+Aceita .png, .svg, .jpg ou .webp — o build reconhece os quatro.
+Prefira PNG com fundo transparente ou SVG. Tamanho ideal: 200x200px.
+
+ONDE CONSEGUIR
+--------------
+O caminho mais rápido é a própria página da empresa no LinkedIn:
+abra o perfil da companhia, clique com o botão direito sobre a logo
+e salve a imagem. Serve também o site oficial, na página de imprensa
+ou "brand assets", que costuma ter a versão em alta resolução.
+
+DEPOIS DE COLOCAR OS ARQUIVOS
+-----------------------------
+Abra index.html, procure por "job__logo" e troque o monograma pela
+imagem em cada um dos três cargos:
+
+    DE:   <span class="job__logo" aria-hidden="true"><abbr data-long>KPMG</abbr></span>
+    PARA: <span class="job__logo"><img src="assets/logos/kpmg.png" alt="KPMG"></span>
+
+Repare que o aria-hidden sai: com a logo de verdade, o alt já descreve
+a empresa para leitores de tela.
+
+Enquanto os arquivos não existirem, o monograma continua aparecendo —
+o site não quebra.
+
+SOBRE USAR LOGO DE EMPRESA
+--------------------------
+Exibir a marca do empregador no seu próprio currículo ou portfólio,
+para identificar onde você trabalhou, é uso normal e aceito. O que não
+se faz é alterar a marca, dar a entender que a empresa endossa o site,
+ou usá-la como se fosse sua. Mantenha as logos como estão, no tamanho
+pequeno em que aparecem, e está tudo certo.

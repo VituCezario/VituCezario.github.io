@@ -1,0 +1,38 @@
+IMAGENS DOS PROJETOS
+====================
+
+Coloque aqui a imagem de cada projeto. Depois é só apontar para ela no
+campo `image` de js/projects.js.
+
+NOME DO ARQUIVO
+---------------
+Sem espaço, sem acento, tudo minúsculo, separado por hífen:
+
+    coleta-evidencias.jpg
+    base-power-query.png
+    triagem-ia.jpg
+
+Nome com espaço ou acento costuma quebrar quando o site vai para o ar,
+e é um erro chato de achar depois.
+
+TAMANHO
+-------
+Proporção 16:10. O ideal é 1200 x 750 px.
+Se mandar outra proporção, o card corta pelo centro em vez de deformar.
+Acima de 400 KB por imagem o site começa a pesar — vale comprimir em
+qualquer compressor online antes de subir.
+
+O QUE FOTOGRAFAR
+----------------
+Para automação, a captura do script rodando ou do resultado vale mais que
+um ícone genérico: o terminal com a saída, a planilha preenchida, o antes
+e o depois lado a lado. Banco de imagem não diz nada sobre o seu trabalho.
+
+Cuidado com dado de cliente na captura. Borre nome de empresa, CNPJ,
+valor e qualquer informação que não seja sua para mostrar.
+
+SEM IMAGEM
+----------
+Deixe o campo `image` vazio ("") em js/projects.js. O card mostra o número
+do projeto em marca-d'água e continua com a mesma forma dos outros. É
+melhor publicar o projeto sem imagem do que deixar o projeto de fora.

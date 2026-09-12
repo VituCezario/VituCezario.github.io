@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="es" data-root="../">
+<head>
+<!-- ============================================================
+     ARQUIVO GERADO AUTOMATICAMENTE — NAO EDITE ESTE ARQUIVO.
+     Fonte da estrutura:  index.html
+     Fonte dos textos:    i18n/es.json
+     Para mudar algo aqui, edite um dos dois e rode: node translate.js
+     ============================================================ -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vitor — Consultor de innovación y automatización</title>
+<meta name="description" content="Portafolio de Vitor: Tax Consulting e incentivos fiscales a la I+D en KPMG, construyendo automatización e IA aplicadas a procesos reales. Mi objetivo no es saberlo todo. Es seguir aprendiendo.">
+<meta name="author" content="Vitor">
+
+<!-- O "V." do hero, em 32x32. Vira o ícone da aba do navegador. -->
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0B0A0C">
+
+<link rel="canonical" href="https://vitucezario.github.io/es/">
+
+<!-- Diz ao Google que as três versões são o mesmo site em idiomas diferentes -->
+<link rel="alternate" hreflang="pt-BR" href="https://vitucezario.github.io/">
+<link rel="alternate" hreflang="en" href="https://vitucezario.github.io/en/">
+<link rel="alternate" hreflang="es" href="https://vitucezario.github.io/es/">
+<link rel="alternate" hreflang="x-default" href="https://vitucezario.github.io/">
+
+<!-- Open Graph — como o link aparece quando você compartilha no LinkedIn/WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Vitor — Consultor de innovación y automatización">
+<meta property="og:description" content="Convierto conocimiento, tecnología y creatividad en soluciones que marcan la diferencia.">
+<meta property="og:image" content="https://vitucezario.github.io/assets/img/vitor-hero.jpg">
+<meta property="og:url" content="https://vitucezario.github.io/es/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- Malha de fundo. Fica quase invisível em repouso e acende onde o cursor
+     passa — a mesma matriz de pontos do retrato, estendida à página inteira. -->
+<canvas id="field" aria-hidden="true"></canvas>
+
+<!-- ================= ÍCONES =================
+     Conjunto de traço único, desenhado à mão para este site. Todos herdam a
+     cor do tema (currentColor), então ficam cinza no repouso e vermelhos no
+     hover, sem virar adesivo colorido sobre o fundo escuro.
+
+     Para trocar um por outro: substitua o conteúdo do <symbol> correspondente.
+     Ícones monocromáticos prontos existem em simpleicons.org — copie só o
+     conteúdo do <path> e cole aqui dentro do symbol certo.
+     ========================================= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<defs>
+  <symbol id="i-python" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="4" y="2.8" width="10" height="9.2" rx="3"/>
+    <rect x="10" y="12" width="10" height="9.2" rx="3"/>
+    <circle cx="7.4" cy="6.2" r="1" fill="currentColor" stroke="none"/>
+    <circle cx="16.6" cy="17.8" r="1" fill="currentColor" stroke="none"/>
+  </symbol>
+
+  <symbol id="i-aws" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 6.5v4M4 6.5l2 4 2-4v4"/>
+    <path d="M11 6.5l1.4 4 1.3-3 1.3 3 1.4-4"/>
+    <path d="M20 7c-.7-.6-2.6-.7-2.6.6 0 1.4 2.6.8 2.6 2.3 0 1.3-2 1.2-2.7.6"/>
+    <path d="M2.5 16c4.6 3.2 12.6 3.6 17.6.4"/>
+    <path d="M17.6 14.6l3.4 1.4-1.6 3"/>
+  </symbol>
+
+  <symbol id="i-docker" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2.8" y="10.2" width="3.1" height="3.1"/>
+    <rect x="6.6" y="10.2" width="3.1" height="3.1"/>
+    <rect x="10.4" y="10.2" width="3.1" height="3.1"/>
+    <rect x="6.6" y="6.6" width="3.1" height="3.1"/>
+    <rect x="10.4" y="6.6" width="3.1" height="3.1"/>
+    <path d="M1.8 14.6c.6 3.1 3.1 4.9 6.6 4.9 5 0 8.9-2.4 10.4-6.2 1.4.5 2.6.2 3.2-.9-1.1-.9-2.7-.8-3.5.2"/>
+  </symbol>
+
+  <symbol id="i-postgresql" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="12" cy="5.8" rx="7" ry="2.9"/>
+    <path d="M5 5.8v12.4c0 1.6 3.1 2.9 7 2.9s7-1.3 7-2.9V5.8"/>
+    <path d="M5 12c0 1.6 3.1 2.9 7 2.9s7-1.3 7-2.9"/>
+  </symbol>
+
+  <symbol id="i-java" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4.5 10.5h11V16a4 4 0 0 1-4 4h-3a4 4 0 0 1-4-4z"/>
+    <path d="M15.5 12.2h1.8a2.6 2.6 0 0 1 0 5.2h-1.4"/>
+    <path d="M8.6 2.6c-1.2 1.4-.2 2.4.3 3.2s.4 1.6-.5 2.4"/>
+    <path d="M12.4 3.4c-1 1.2-.2 2 .2 2.7s.3 1.3-.5 2"/>
+  </symbol>
+
+  <symbol id="i-dotnet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2.6" y="2.6" width="18.8" height="18.8" rx="4.5"/>
+    <circle cx="7.4" cy="16" r="1.3" fill="currentColor" stroke="none"/>
+    <path d="M10.8 16.5v-9l5.6 9v-9"/>
+  </symbol>
+
+  <symbol id="i-n8n" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="4.2" cy="12" r="2.2"/>
+    <circle cx="12" cy="6.2" r="2.2"/>
+    <circle cx="12" cy="17.8" r="2.2"/>
+    <circle cx="19.8" cy="12" r="2.2"/>
+    <path d="M6 10.7l4.2-3.1M6 13.3l4.2 3.1M13.8 7.6l4.2 3.1M13.8 16.4l4.2-3.1"/>
+  </symbol>
+
+  <symbol id="i-playwright" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2.5" y="4" width="19" height="16" rx="2.5"/>
+    <path d="M2.5 8.6h19"/>
+    <circle cx="5.6" cy="6.3" r=".8" fill="currentColor" stroke="none"/>
+    <path d="M10 11.4l5.2 3.1-5.2 3.1z"/>
+  </symbol>
+
+  <symbol id="i-excel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="4" width="18" height="16" rx="2"/>
+    <path d="M3 9.2h18M3 14.6h18M9.4 4v16"/>
+  </symbol>
+
+  <symbol id="i-powerquery" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3.5 4.5h17l-6.6 7.7v6.6l-3.8 2v-8.6z"/>
+  </symbol>
+
+  <symbol id="i-ia" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10.2 3.2l1.8 4.6 4.6 1.8-4.6 1.8-1.8 4.6-1.8-4.6L3.8 9.6l4.6-1.8z"/>
+    <path d="M17.6 14.4l.8 2.1 2.1.8-2.1.8-.8 2.1-.8-2.1-2.1-.8 2.1-.8z"/>
+  </symbol>
+
+  <symbol id="i-leidobem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 2.8h8l4 4v10.4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4.8a2 2 0 0 1 2-2z"/>
+    <path d="M14 2.8v4h4"/>
+    <circle cx="11.5" cy="12.4" r="2.4"/>
+    <path d="M9.9 14.4L9.4 18l2.1-1.1 2.1 1.1-.5-3.6"/>
+  </symbol>
+</defs>
+</svg>
+
+
+<!-- Seletor de idioma. O translate.js reescreve estes caminhos em cada versão. -->
+<nav class="langs" aria-label="Idioma">
+  <a href="../index.html" hreflang="pt-BR">PT</a>
+  <a href="../en/index.html" hreflang="en">EN</a>
+  <a href="index.html" hreflang="es" aria-current="true">ES</a>
+</nav>
+
+<!-- Progresso de leitura em telas estreitas -->
+<div class="topbar" aria-hidden="true"><div class="topbar__fill" id="topFill"></div></div>
+
+<!-- A espinha: a propria pagina e a linha do tempo da trajetoria -->
+<nav class="spine" aria-label="Secciones">
+  <div class="spine__fill" id="spineFill" aria-hidden="true"></div>
+  <ul class="spine__list">
+    <li><a class="spine__link" href="#inicio"><span class="spine__dot" aria-hidden="true"></span><span class="spine__label">Inicio</span></a></li>
+    <li><a class="spine__link" href="#experiencia"><span class="spine__dot" aria-hidden="true"></span><span class="spine__label">Experiencia</span></a></li>
+    <li><a class="spine__link" href="#trajetoria"><span class="spine__dot" aria-hidden="true"></span><span class="spine__label">Trayectoria</span></a></li>
+    <li><a class="spine__link" href="#projetos"><span class="spine__dot" aria-hidden="true"></span><span class="spine__label">Proyectos</span></a></li>
+    <li><a class="spine__link" href="#ferramentas"><span class="spine__dot" aria-hidden="true"></span><span class="spine__label">Herramientas</span></a></li>
+    <li><a class="spine__link" href="#aprendendo"><span class="spine__dot" aria-hidden="true"></span><span class="spine__label">Aprendiendo</span></a></li>
+    <li><a class="spine__link" href="#contato"><span class="spine__dot" aria-hidden="true"></span><span class="spine__label">Contacto</span></a></li>
+  </ul>
+</nav>
+
+<main class="shell">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="inicio">
+    <div class="wrap hero__inner">
+      <div>
+        <div class="hero__eyebrow">
+          <span class="dot" aria-hidden="true"></span>
+          <span class="mono">Cristiano &middot; Hecho para innovar &middot; I+D &middot; 23 años</span>
+        </div>
+
+        <!-- O ponto final é o cursor: pisca enquanto o nome é digitado e
+             então para, virando pontuação. Sem JS, o nome já vem escrito. -->
+        <h1 class="hero__name"><span id="heroTyped">Vitor</span><span class="stop" id="heroStop">.</span></h1>
+
+        <p class="hero__lead">
+          Convierto conocimiento, tecnología y creatividad en soluciones que marcan <em>la diferencia</em>.
+        </p>
+
+        <p class="hero__sub">
+          Vivo entre la innovación y la tecnología: observo, aprendo, experimento y convierto problemas reales en nuevas posibilidades con automatización e IA.
+        </p>
+
+        <div class="hero__cues">
+          <span class="mono" id="heroCue">Haz clic en cualquier lugar</span>
+          <span class="mono" style="color:var(--faint)">São Paulo &middot; origen Paraíba</span>
+        </div>
+      </div>
+
+      <!-- Retrato: a foto real vira matriz de dados conforme voce interage.
+           Sem botao, sem video — o proprio site reage ao cursor e ao clique. -->
+      <div class="portrait" id="portrait" data-ready="false">
+        <div class="portrait__field" aria-hidden="true"></div>
+        <img class="portrait__fallback" src="../assets/img/vitor-hero.jpg" alt="Vitor, de traje, analizando un tablero de ajedrez">
+        <canvas id="portraitCanvas" role="img" aria-label="Retrato de Vitor que se convierte en una matriz de puntos a medida que interactúas con la página"></canvas>
+        <div class="portrait__frame" aria-hidden="true"></div>
+        <div class="portrait__readout" aria-hidden="true">
+          <span>Señal <b id="readSignal">00</b>%</span>
+          <span id="readMode">Fotografía</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MANIFESTO ================= -->
+  <section class="manifesto band">
+    <div class="wrap grid-meta">
+      <div class="section-head">
+        <span class="section-head__rule" aria-hidden="true"></span>
+        <span class="mono">Lema</span>
+      </div>
+      <div>
+        <h2 class="manifesto__quote rv">
+          Mi objetivo es <span class="hl">seguir aprendiendo</span>.
+        </h2>
+        <div class="prose manifesto__body rv" style="margin-top:28px">
+          <p>
+           Cada problema despierta una pregunta. Cada pregunta abre un descubrimiento. Y cada descubrimiento me da una nueva oportunidad de experimentar, construir e ir más allá de lo que ya conozco.
+          </p>
+          <p>
+            Porque, para mí, evolucionar es eso: mantener la curiosidad encendida, convertir el aprendizaje en acción y no dejar nunca de descubrir lo que todavía puedo construir.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIÊNCIA ================= -->
+  <section class="band" id="experiencia">
+    <div class="wrap grid-meta">
+      <div class="section-head">
+        <span class="section-head__rule" aria-hidden="true"></span>
+        <span class="mono">Experiencia</span>
+        <p class="mono" style="letter-spacing:0.06em;text-transform:none;color:var(--faint);line-height:1.6">
+          Dónde estoy y dónde estuve.
+        </p>
+      </div>
+
+      <div class="jobs">
+
+        <article class="job job--now rv">
+          <div class="job__when">
+            <span class="job__period">Dic 2025 — Presente</span>
+            <span class="job__now">Actual</span>
+            <!-- data-since: o tempo de casa é calculado sozinho, para nunca ficar desatualizado -->
+            <span class="job__meta"><span data-since="2025-12">10 meses</span><br>São Paulo &middot; Híbrido<br>Jornada completa</span>
+          </div>
+          <div>
+            <!-- LOGO: solte o arquivo em assets/logos/kpmg.png e troque o <abbr> por
+                 <img src="assets/logos/kpmg.png" alt="KPMG">. O monograma é só o plano B. -->
+            <div class="job__head">
+              <span class="job__logo" aria-hidden="true"><abbr data-long>KPMG</abbr></span>
+              <div>
+                <h2 class="job__title">Trainee &middot; Tax Consulting</h2>
+                <span class="job__org">KPMG Brasil</span>
+              </div>
+            </div>
+
+            <p class="job__text">
+              Análisis fiscal, liquidación de impuestos y organización de datos: revisión de facturas, elaboración de controles y extracción de grandes volúmenes de información.
+            </p>
+            <p class="job__text">
+              También es de donde viene mi trabajo con la <span class="term">Lei do Bem (Ley Federal 11.196/2005)</span>, el incentivo fiscal brasileño a la I+D, que permite a la empresa deducir parte de lo que invierte en Investigación, Desarrollo e Innovación. Solo que el beneficio no cae del cielo: alguien tiene que demostrar, en lenguaje técnico y con evidencia, que hubo <span class="term">incertidumbre tecnológica</span> de verdad — y no trabajo de rutina. Ahí es donde entro yo.
+            </p>
+
+            <ul class="duties">
+              <li><span>Análisis fiscal, liquidación de impuestos y revisión de facturas</span></li>
+              <li><span>Elaboración de controles y extracción de grandes volúmenes de datos</span></li>
+              <li><span>Análisis técnico de proyectos de I+D+i y encuadre en los criterios de la ley</span></li>
+              <li><span>Recopilación, organización y crítica de evidencias técnicas</span></li>
+              <li><span>Elaboración de expedientes, informes y materiales técnicos del año base</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job rv">
+          <div class="job__when">
+            <span class="job__period">Oct — Nov 2025</span>
+            <span class="job__meta">2 meses<br>São Paulo &middot; Remoto<br>Jornada completa</span>
+          </div>
+          <div>
+            <div class="job__head">
+              <span class="job__logo" aria-hidden="true"><abbr>SH</abbr></span>
+              <div>
+                <h3 class="job__title">Becario &middot; CRM y Tech</h3>
+                <span class="job__org">Shakers Agência &amp; Consultoria</span>
+              </div>
+            </div>
+
+            <p class="job__text">
+              Un paso corto por el área de CRM y tecnología, cuidando la relación con el cliente y las rutinas de automatización de marketing. Dos meses suficientes para entender cómo opera una agencia por dentro — y dónde pierde tiempo.
+            </p>
+
+            <div class="job__skills">
+              <span class="tag">CRM</span>
+              <span class="tag">RD Station</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="job rv">
+          <div class="job__when">
+            <span class="job__period">Mar 2024 — May 2025</span>
+            <span class="job__meta">1 ano e 3 meses<br>São Paulo &middot; Presencial<br>Prácticas</span>
+          </div>
+          <div>
+            <div class="job__head">
+              <span class="job__logo" aria-hidden="true"><abbr>PGM</abbr></span>
+              <div>
+                <h3 class="job__title">Becario de desarrollo</h3>
+                <span class="job__org">Procuraduría General del Municipio de São Paulo (PGM/SP)</span>
+              </div>
+            </div>
+
+            <p class="job__text">
+              Más de un año dentro del TI del sector público: soporte de Help Desk, aplicaciones en la nube y el contacto diario con el problema de quien está del otro lado del ticket.
+            </p>
+            <p class="job__text">
+              Ahí fue donde me cayó la ficha. Lo que traba un proceso casi nunca es falta de tecnología — es que nadie se detuvo a reescribir el proceso.
+            </p>
+
+            <div class="job__skills">
+              <span class="tag">Soporte / Help Desk</span>
+              <span class="tag">Aplicaciones en la nube</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TRAJETORIA ================= -->
+  <section class="band" id="trajetoria" style="border-top:1px solid var(--line)">
+    <div class="wrap grid-meta">
+      <div class="section-head">
+        <span class="section-head__rule" aria-hidden="true"></span>
+        <span class="mono">Trayectoria</span>
+        <p class="mono" style="letter-spacing:0.06em;text-transform:none;color:var(--faint);line-height:1.6">
+          Tres fotos, una dirección.
+        </p>
+      </div>
+
+      <div class="story">
+
+        <article class="chapter rv">
+          <div class="chapter__media">
+            <img src="../assets/img/historia-1-infancia.jpg" alt="Vitor de niño, uniformado, haciendo el saludo militar" loading="lazy">
+          </div>
+          <div>
+            <span class="chapter__year">Capítulo 01 &middot; Paraíba</span>
+            <h3 class="chapter__title">Antes de São Paulo, estuvo Paraíba</h3>
+            <p class="chapter__text">
+              De allí viene mi familia y de allí viene la parte de mí que no aparece en el currículum: saber que nada llega hecho. La distancia entre donde empecé y donde estoy hoy es lo que me hace seguir.
+            </p>
+            <p class="chapter__caption">
+              El uniforme era de juego. Las ganas de llegar a algún lado, no.
+            </p>
+          </div>
+        </article>
+
+        <article class="chapter rv">
+          <div class="chapter__media">
+            <img src="../assets/img/historia-2-familia.jpg" alt="Vitor de niño, en brazos, en una fiesta de cumpleaños en casa" loading="lazy">
+          </div>
+          <div>
+            <span class="chapter__year">Capítulo 02 &middot; Familia</span>
+            <h3 class="chapter__title">Nada de esto fue solo</h3>
+            <p class="chapter__text">
+              Cada logro que enumero aquí tiene gente detrás. Mi familia es la razón por la que empecé a correr y la razón por la que no paré. Cuando hablo de independencia, hablo de devolver.
+            </p>
+            <p class="chapter__caption">
+              Cumpleaños en casa, globos pegados en la pared. El comienzo de todo huele así.
+            </p>
+          </div>
+        </article>
+
+        <article class="chapter rv">
+          <div class="chapter__media">
+            <img src="../assets/img/historia-3-formatura.jpg" alt="Vitor graduado, con toga y birrete, en su graduación de UNICID" loading="lazy">
+          </div>
+          <div>
+            <span class="chapter__year">Capítulo 03 &middot; UNICID</span>
+            <h3 class="chapter__title">La beca no fue un detalle</h3>
+            <p class="chapter__text">
+              Fue ella la que hizo posible la universidad. Me gradué en la Universidade Cidade de São Paulo y entré en una de las mayores consultoras del mundo. Guardo ese diploma menos como punto de llegada y más como prueba de que el plan funciona cuando insistes.
+            </p>
+            <p class="chapter__caption">
+              El primer diploma de la foto. No pretendo que sea el último documento importante.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJETOS ================= -->
+  <section class="band" id="projetos" style="border-top:1px solid var(--line)">
+    <div class="wrap grid-meta">
+      <div class="section-head">
+        <span class="section-head__rule" aria-hidden="true"></span>
+        <span class="mono">Proyectos</span>
+        <p class="mono" style="letter-spacing:0.06em;text-transform:none;color:var(--faint);line-height:1.6">
+          Problema, idea, tecnología, solución, resultado.
+        </p>
+      </div>
+
+      <!-- Cards gerados a partir de js/projects.js.
+           Para adicionar um projeto voce edita AQUELE arquivo, nao este. -->
+      <div class="pgrid rv" id="projectGrid"></div>
+    </div>
+  </section>
+
+  <!-- ================= FERRAMENTAS ================= -->
+  <section class="band" id="ferramentas" style="border-top:1px solid var(--line)">
+    <div class="wrap grid-meta">
+      <div class="section-head">
+        <span class="section-head__rule" aria-hidden="true"></span>
+        <span class="mono">Herramientas</span>
+        <p class="mono" style="letter-spacing:0.06em;text-transform:none;color:var(--faint);line-height:1.6">
+          Lo que uso y para qué.
+        </p>
+      </div>
+
+      <div>
+        <!-- Para remover uma ferramenta, apague o bloco .tool inteiro.
+             Para adicionar, copie um bloco e troque ícone, nome, texto e nível.
+             Os ícones ficam no sprite <svg> logo depois do <body>. -->
+        <div class="tools rv" id="tools">
+          <div class="tool">
+            <div class="tool__head">
+              <span class="tool__icon" aria-hidden="true"><svg><use href="#i-python"/></svg></span>
+              <div class="tool__name">Python</div>
+            </div>
+            <p class="tool__use">Automatización de rutinas, tratamiento de datos y scripts que eliminan trabajo repetido.</p>
+            <div class="tool__bar" aria-hidden="true"><i style="--lvl:78%"></i></div>
+          </div>
+
+          <div class="tool">
+            <div class="tool__head">
+              <span class="tool__icon" aria-hidden="true"><svg><use href="#i-n8n"/></svg></span>
+              <div class="tool__name">n8n</div>
+            </div>
+            <p class="tool__use">Orquestación de automatización entre sistemas, sin escribir pegamento para cada integración.</p>
+            <div class="tool__bar" aria-hidden="true"><i style="--lvl:55%"></i></div>
+          </div>
+
+          <div class="tool">
+            <div class="tool__head">
+              <span class="tool__icon" aria-hidden="true"><svg><use href="#i-postgresql"/></svg></span>
+              <div class="tool__name">PostgreSQL</div>
+            </div>
+            <p class="tool__use">SQL y modelado de datos para cuando la hoja de cálculo ya no da abasto.</p>
+            <div class="tool__bar" aria-hidden="true"><i style="--lvl:45%"></i></div>
+          </div>
+
+          <div class="tool">
+            <div class="tool__head">
+              <span class="tool__icon" aria-hidden="true"><svg><use href="#i-docker"/></svg></span>
+              <div class="tool__name">Docker</div>
+            </div>
+            <p class="tool__use">Empaquetar el proyecto para que corra igual en mi máquina y en la de cualquiera.</p>
+            <div class="tool__bar" aria-hidden="true"><i style="--lvl:35%"></i></div>
+          </div>
+
+          <div class="tool">
+            <div class="tool__head">
+              <span class="tool__icon" aria-hidden="true"><svg><use href="#i-aws"/></svg></span>
+              <div class="tool__name">AWS</div>
+            </div>
+            <p class="tool__use">Nube para alojar automatización y dejar rutinas corriendo fuera de mi máquina.</p>
+            <div class="tool__bar" aria-hidden="true"><i style="--lvl:35%"></i></div>
+          </div>
+
+          <div class="tool">
+            <div class="tool__head">
+              <span class="tool__icon" aria-hidden="true"><svg><use href="#i-java"/></svg></span>
+              <div class="tool__name">Java</div>
+            </div>
+            <p class="tool__use">Lenguaje tipado y orientado a objetos — la base para entender sistemas grandes.</p>
+            <div class="tool__bar" aria-hidden="true"><i style="--lvl:30%"></i></div>
+          </div>
+
+          <div class="tool">
+            <div class="tool__head">
+              <span class="tool__icon" aria-hidden="true"><svg><use href="#i-excel"/></svg></span>
+              <div class="tool__name">Excel</div>
+            </div>
+            <p class="tool__use">La superficie de trabajo del día a día. Fórmula avanzada, estructura de base, verificación.</p>
+            <div class="tool__bar" aria-hidden="true"><i style="--lvl:90%"></i></div>
+          </div>
+
+          <div class="tool">
+            <div class="tool__head">
+              <span class="tool__icon" aria-hidden="true"><svg><use href="#i-ia"/></svg></span>
+              <div class="tool__name">IA generativa</div>
+            </div>
+            <p class="tool__use">Triaje de texto técnico, redacción asistida y prototipado rápido de ideas.</p>
+            <div class="tool__bar" aria-hidden="true"><i style="--lvl:75%"></i></div>
+          </div>
+
+          <div class="tool">
+            <div class="tool__head">
+              <span class="tool__icon" aria-hidden="true"><svg><use href="#i-leidobem"/></svg></span>
+              <div class="tool__name">Lei do Bem</div>
+            </div>
+            <p class="tool__use">Encuadre de I+D+i, evidencia, expediente técnico y rendición de cuentas.</p>
+            <div class="tool__bar" aria-hidden="true"><i style="--lvl:85%"></i></div>
+          </div>
+        </div>
+        <p class="tools-legend">La barra = cuánto ya he corrido con eso, no cuánto creo que sé.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= APRENDENDO ================= -->
+  <section class="band" id="aprendendo" style="border-top:1px solid var(--line)">
+    <div class="wrap grid-meta">
+      <div class="section-head">
+        <span class="section-head__rule" aria-hidden="true"></span>
+        <span class="mono">Evolución</span>
+      </div>
+
+      <div>
+        <h2 class="rv" style="font-size:var(--t-xl);margin-bottom:30px">Dónde estaba, dónde estoy, hacia dónde voy</h2>
+
+        <div class="learn rv">
+          <div class="learn__col">
+            <span class="learn__when">Terreno firme</span>
+            <ul class="learn__list">
+              <li>Análisis técnico de proyectos de I+D+i</li>
+              <li>Documentación y expediente técnico</li>
+              <li>Excel y Power Query a nivel de producción</li>
+              <li>Automatización de tareas con Python</li>
+            </ul>
+          </div>
+          <div class="learn__col">
+            <span class="learn__when">Estudiando ahora</span>
+            <ul class="learn__list">
+              <li>Ingeniería de software y buenas prácticas de código</li>
+              <li>Desarrollo web y construcción de interfaces</li>
+              <li>IA generativa aplicada a procesos corporativos</li>
+              <li>Comunicación técnica: explicar sin simplificar de más</li>
+            </ul>
+          </div>
+          <div class="learn__col learn__col--next">
+            <span class="learn__when">Hacia dónde voy</span>
+            <ul class="learn__list">
+              <li>Unir consultoría de innovación y construcción de producto</li>
+              <li>Llevar IA a procesos que hoy son manuales</li>
+              <li>Construir soluciones propias, del problema al usuario final</li>
+              <li>Independencia — profesional y personal</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ================= CONTATO ================= -->
+  <section class="contact band" id="contato">
+    <div class="wrap grid-meta">
+      <div class="section-head">
+        <span class="section-head__rule" aria-hidden="true"></span>
+        <span class="mono">Contacto</span>
+      </div>
+
+      <div>
+        <h2 class="contact__title rv">Vamos a<br>construir<br>algo<span class="red">.</span></h2>
+
+        <p class="lead rv">
+          Estoy abierto a conversar sobre incentivos fiscales a la I+D, automatización de procesos e IA aplicada. Si tienes un problema repetitivo, probablemente tenga solución.
+        </p>
+
+        <div class="links rv">
+          <a class="link-row" href="mailto:vitormedeiros0708@gmail.com">
+            <span class="link-row__label">Correo</span>
+            <span class="link-row__value">vitormedeiros0708@gmail.com</span>
+          </a>
+          <a class="link-row" href="https://www.linkedin.com/in/vitor-de-medeiros-cezario/" target="_blank" rel="noopener">
+            <span class="link-row__label">LinkedIn</span>
+            <span class="link-row__value">/in/vitor-de-medeiros-cezario &nearr;</span>
+          </a>
+          <a class="link-row" href="https://github.com/VituCezario" target="_blank" rel="noopener">
+            <span class="link-row__label">GitHub</span>
+            <span class="link-row__value">/VituCezario &nearr;</span>
+          </a>
+        </div>
+
+        <div class="foot">
+          <p>Vitor &middot; São Paulo, Brasil</p>
+          <p>Hecho a mano &middot; <span id="year">2026</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="../js/hero-image.js"></script>
+<script src="../js/projects.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
