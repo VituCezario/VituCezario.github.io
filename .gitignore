@@ -1,0 +1,21 @@
+# ---------------------------------------------------------------------------
+# Apoio/ — NÃO PUBLICAR.
+# Guarda o texto com suas reflexões pessoais (família, fé, planos, gostos) que
+# serviu de base para escrever o site, mais as fotos originais sem tratamento.
+# O que precisava virar site já virou. O resto é rascunho privado e, num
+# repositório público, ficaria legível para qualquer pessoa — inclusive no
+# histórico do Git, que não esquece nem depois de apagar o arquivo.
+# ---------------------------------------------------------------------------
+Apoio/
+
+# Saída do build: gerada por `node build.js`, não precisa ir para o repositório
+dist/
+
+# Página de diagnóstico: ferramenta sua, não faz parte do site
+diagnostico.html
+
+# Lixo de sistema
+node_modules/
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,11 @@
+# Normaliza quebra de linha: LF no repositório, nativo no seu Windows.
+# Sem isto, o Git avisa em cada commit e um mesmo arquivo pode aparecer como
+# "totalmente alterado" para quem abrir o projeto em outro sistema.
+* text=auto eol=lf
+
+# Binários não passam por conversão
+*.jpg  binary
+*.jpeg binary
+*.png  binary
+*.webp binary
+*.pdf  binary
